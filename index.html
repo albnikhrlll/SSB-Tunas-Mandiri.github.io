@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SSB Tunas Mandiri</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,300;0,400;0,700;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="shortcut icon" href="img/logo-ssb.png" type="image/x-icon" />
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="https://unpkg.com/feather-icons"></script>
+  </head>
+
+  <body>
+    <!-- Navbar start -->
+    <nav class="navbar">
+      <img class="logo" src="img/logo-ssb.png" alt="Logo SSB" />
+      <a href="#" class="navbar-logo">Tunas<span>Mandiri</span></a>
+
+      <div class="navbar-nav">
+        <a href="#home">Beranda</a>
+        <a href="#about">Tentang Kami</a>
+        <a href="#club">Klub</a>
+        <a href="#shop">Belanja</a>
+        <a href="#galeri">Galeri</a>
+        <a href="#contact">Kontak</a>
+      </div>
+
+      <div class="navbar-extra">
+        <a
+          class="btn btn-primary"
+          onclick="openUserModal()"
+          style="width: auto"
+        >
+          <i data-feather="user"></i>
+        </a>
+        <a id="hamburger-menu"><i data-feather="menu"></i></a>
+      </div>
+
+      <div class="modal" id="usr">
+        <div class="modal-content animate">
+          <div class="container">
+            <div class="close-modal" onclick="closeUserModal()">X</div>
+            <h1 class="lgn">Login</h1>
+            <br />
+            <form action="loginAdmin.php" method="post">
+              <label for="uname"><b>Username: </b></label>
+              <input
+                type="text"
+                class="input-field"
+                placeholder="Masukkan Username"
+                name="uname"
+                required
+              />
+              <label for="psw"><b>Password: </b></label>
+              <input
+                type="password"
+                class="input-field"
+                placeholder="Masukkan Password"
+                name="psw"
+                required
+              />
+              <button type="submit" class="sbm" value="login">Login</button>
+            </form>
+          </div>
+        </div>
+      </div>
+
+      <script>
+        var userModal = document.getElementById("usr");
+        function openUserModal() {
+          userModal.style.display = "block";
+        }
+        function closeUserModal() {
+          userModal.style.display = "none";
+        }
+        window.onclick = function (event) {
+          if (event.target == userModal) {
+            closeUserModal();
+          }
+        };
+      </script>
+    </nav>
+    <!-- Navbar end -->
+
+    <!-- Hero Section start -->
+    <section class="hero" id="home">
+      <div class="content">
+        <h1>SSB <span>Tunas Mandiri</span></h1>
+        <p>Make your dream as reality.</p>
+      </div>
+    </section>
+    <!-- Hero Section end -->
+
+    <!-- About Section start -->
+    <section id="about" class="about">
+      <h2><span>Tentang</span> Kami</h2>
+
+      <div class="row">
+        <div class="about-img">
+          <img src="img/logo-ssb.png" alt="Tentang Kami" />
+        </div>
+        <div class="content">
+          <h4>
+            Sekolah Sepak Bola Tunas Mandiri merupakan sekolah sepak bola yang
+            berlokasi di Desa Sukamulya - Kec. Garawangi - Kab. Kuningan.
+          </h4>
+          <br />
+          <h3>VISI</h3>
+          <p>
+            Mengembangkan minat dan bakat generasi muda dalam dunia sepaknola,
+            khususnya talenta Desa Sukamulya dan sekitarnya.
+          </p>
+          <h3>MISI</h3>
+          <p>
+            Membentuk generasi sehat, berkarakter dan berprestasi Mengembangkan
+            potensi dan meningkatkan prestasi Menciptakan pesepakbola yang
+            berattitude dan beretika Menjalin kekeluargaan yang sehat Membentuk
+            pesepakbola yang sportif dan professional Mengembangkan bakat
+            sepakbola sesuai dengan kemampuan yang dimiliki
+          </p>
+        </div>
+      </div>
+    </section>
+    <br />
+    <!-- About Section end -->
+
+    <!-- Klub start -->
+    <section id="club" class="club">
+      <h2><span>Klub</span> Kami</h2>
+      <h3>Manajemen Klub</h3>
+
+      <div class="row">
+        <div class="menu-card">
+          <img src="img/Afandi.png" alt="afan" class="menu-card-img" />
+          <h3 class="menu-card-title">Khoeirafandi</h3>
+          <p class="menu-card-price">Penanggung Jawab</p>
+        </div>
+        <div class="menu-card">
+          <img src="img/Nana.png" alt="nana" class="menu-card-img" />
+          <h3 class="menu-card-title">Nana Sutarna</h3>
+          <p class="menu-card-price">Pengurus</p>
+        </div>
+        <div class="menu-card">
+          <img src="img/Arya.png" alt="arya" class="menu-card-img" />
+          <h3 class="menu-card-title">Arya Dwi Yanuar</h3>
+          <p class="menu-card-price">Pelatih</p>
+        </div>
+      </div>
+      <br />
+
+      <h3>Skuad Kami</h3>
+      <br />
+      <table>
+        <tr>
+          <td><b>U-13</b></td>
+          <td>
+            Daftar pemain :
+            <table>
+              <tr>
+                <td>Aldi</td>
+              </tr>
+              <tr>
+                <td>Sandi</td>
+              </tr>
+              <tr>
+                <td>Rizal</td>
+              </tr>
+              <tr>
+                <td>Rizki</td>
+              </tr>
+              <tr>
+                <td>Samsul</td>
+              </tr>
+              <tr>
+                <td>Haidar</td>
+              </tr>
+              <tr>
+                <td>Lutfan Aufa</td>
+              </tr>
+              <tr>
+                <td>Tamim</td>
+              </tr>
+              <tr>
+                <td>Hadad</td>
+              </tr>
+              <tr>
+                <td>Dika</td>
+              </tr>
+              <tr>
+                <td>Akmal</td>
+              </tr>
+              <tr>
+                <td>Refan</td>
+              </tr>
+              <tr>
+                <td>Alif</td>
+              </tr>
+              <tr>
+                <td>Fadil</td>
+              </tr>
+              <tr>
+                <td>Zaki</td>
+              </tr>
+              <tr>
+                <td>Syulum</td>
+              </tr>
+              <tr>
+                <td>Fajri</td>
+              </tr>
+              <tr>
+                <td>Ilham</td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+      </table>
+      <br /><br />
+      <table>
+        <tr>
+          <td><b>U-15</b></td>
+          <td>
+            Daftar pemain :
+            <table>
+              <tr>
+                <td>Arya</td>
+              </tr>
+              <tr>
+                <td>Alli</td>
+              </tr>
+              <tr>
+                <td>Gilang</td>
+              </tr>
+              <tr>
+                <td>Raindo</td>
+              </tr>
+              <tr>
+                <td>Febri</td>
+              </tr>
+              <tr>
+                <td>Rehan</td>
+              </tr>
+              <tr>
+                <td>Rizki</td>
+              </tr>
+              <tr>
+                <td>Apif</td>
+              </tr>
+              <tr>
+                <td>Agung</td>
+              </tr>
+              <tr>
+                <td>Roffi</td>
+              </tr>
+              <tr>
+                <td>Irpan</td>
+              </tr>
+              <tr>
+                <td>Akbar</td>
+              </tr>
+              <tr>
+                <td>Faisal</td>
+              </tr>
+              <tr>
+                <td>Reyhan</td>
+              </tr>
+              <tr>
+                <td>Ekii</td>
+              </tr>
+              <tr>
+                <td>M. Waofal</td>
+              </tr>
+              <tr>
+                <td>Messi</td>
+              </tr>
+              <tr>
+                <td>Iksan</td>
+              </tr>
+              <tr>
+                <td>Marwan</td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+      </table>
+      <br /><br />
+      <table>
+        <tr>
+          <td><b>U-17</b></td>
+          <td>
+            Daftar pemain :
+            <table>
+              <tr>
+                <td>Raihan</td>
+              </tr>
+              <tr>
+                <td>Oki Iskandar</td>
+              </tr>
+              <tr>
+                <td>Ronal</td>
+              </tr>
+              <tr>
+                <td>Baras</td>
+              </tr>
+              <tr>
+                <td>Fardan</td>
+              </tr>
+              <tr>
+                <td>Aldo</td>
+              </tr>
+              <tr>
+                <td>Tatang</td>
+              </tr>
+              <tr>
+                <td>Robi</td>
+              </tr>
+              <tr>
+                <td>Iksal</td>
+              </tr>
+              <tr>
+                <td>Syahroni</td>
+              </tr>
+              <tr>
+                <td>Dika</td>
+              </tr>
+              <tr>
+                <td>Syahrul</td>
+              </tr>
+              <tr>
+                <td>Iman</td>
+              </tr>
+              <tr>
+                <td>Ferdi</td>
+              </tr>
+              <tr>
+                <td>Fagil</td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+      </table>
+      <br /><br />
+    </section>
+    <!-- Klub Section end -->
+
+    <!--Belanja Start-->
+    <section id="shop" class="shop">
+      <h2><span>Belanja</span> Produk Kami</h2>
+      <p>Ayo beli produk kami.</p>
+
+      <div class="row">
+        <div class="product-card">
+          <div class="product-image">
+            <img src="img/white.jpg" alt="Product 1" />
+          </div>
+          <div class="product-content">
+            <h3>T-Shirt Tunas Mandiri White</h3>
+            <div class="product-price">IDR 90K <span>IDR 100K</span></div>
+            <br />
+            <a
+              href="https://www.instagram.com/officialtunasmandiri?igsh=cG13bWhweHhiZmJz"
+              class="beli"
+              >Beli</a
+            >
+          </div>
+        </div>
+        <div class="product-card">
+          <div class="product-image">
+            <img src="img/black.jpg" alt="Product 2" />
+          </div>
+          <div class="product-content">
+            <h3>T-Shirt Tunas Mandiri Black</h3>
+            <div class="product-price">IDR 90K <span>IDR 100K</span></div>
+            <br />
+            <a
+              href="https://www.instagram.com/officialtunasmandiri?igsh=cG13bWhweHhiZmJz"
+              class="beli"
+              >Beli</a
+            >
+          </div>
+        </div>
+        <div class="product-card">
+          <div class="product-image">
+            <img src="img/decker.jpg" alt="Product 2" />
+          </div>
+          <div class="product-content">
+            <h3>Decker / Pelindung Kaki Hitam</h3>
+            <div class="product-price">IDR 30K <span>IDR 40K</span></div>
+            <br />
+            <a
+              href="https://www.instagram.com/officialtunasmandiri?igsh=cG13bWhweHhiZmJz"
+              class="beli"
+              >Beli</a
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--Belanja End-->
+
+    <!--Galeri Start-->
+    <section id="galeri" class="galeri">
+      <h2><span>Galeri</span> Klub Kami</h2>
+      <p>Beberapa foto kegiatan klub kami.</p>
+      <br /><br />
+
+      <div class="row">
+        <div class="column">
+          <img src="img/TM3 - Copy.jpg" />
+          <img src="img/TM4 - Copy.jpg" />
+          <img src="img/IMG-20240107-WA0013.jpg" />
+        </div>
+        <div class="column">
+          <img src="img/IMG-20240107-WA0023.jpg" />
+          <img src="img/IMG-20240107-WA0030.jpg" />
+          <img src="img/IMG-20240107-WA0005.jpg" />
+        </div>
+        <div class="column">
+          <img src="img/TM8.jpg" />
+          <img src="img/TM5 - Copy.jpg" />
+          <img src="img/IMG-20240107-WA0008.jpg" />
+        </div>
+        <div class="column">
+          <img src="img/IMG-20240107-WA0031.jpg" />
+          <img src="img/TM6 - Copy.jpg" />
+          <img src="img/IMG-20240107-WA0021.jpg" />
+        </div>
+      </div>
+    </section>
+    <!--Galeri End-->
+
+    <!-- Contact Section start -->
+    <section id="contact" class="contact">
+      <h2><span>Kontak</span> Kami</h2>
+      <p style="font-size: 1.5rem">Silahkan Hubungi kami melalui ini.</p>
+
+      <div class="row">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5218.682537970428!2d108.55173467867901!3d-6.99721245836414!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e6f13d0fa8d30cd%3A0xcb93e0304a67fb52!2sLapang%20Desa%20Sukamulya%2FMekarmulya!5e0!3m2!1sid!2sid!4v1705421579079!5m2!1sid!2sid"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          class="map"
+        ></iframe>
+
+        <form action="">
+          <div class="input-group">
+            <i data-feather="user"></i>
+            <input type="text" placeholder="nama" />
+          </div>
+          <div class="input-group">
+            <i data-feather="mail"></i>
+            <input type="text" placeholder="email" />
+          </div>
+          <div class="input-group">
+            <i data-feather="phone"></i>
+            <input type="text" placeholder="no hp" />
+          </div>
+          <button type="submit" class="btn">kirim pesan</button>
+        </form>
+      </div>
+    </section>
+    <!-- Contact Section end -->
+
+    <!-- Footer start -->
+    <footer>
+      <div class="socials">
+        <a
+          href="https://www.instagram.com/officialtunasmandiri?igsh=cG13bWhweHhiZmJz"
+          ><i data-feather="instagram"></i
+        ></a>
+      </div>
+
+      <div class="links">
+        <a href="#home">Beranda</a>
+        <a href="#about">Tentang Kami</a>
+        <a href="#club">Klub</a>
+        <a href="#shop">Belanja</a>
+        <a href="#galeri">Galeri</a>
+        <a href="#contact">Kontak</a>
+      </div>
+
+      <div class="credit">
+        <p>Created by <a href="">KelompokJKM</a>. | &copy; 2024.</p>
+      </div>
+    </footer>
+    <!-- Footer end -->
+
+    <!-- Feather Icons -->
+    <script>
+      feather.replace();
+    </script>
+
+    <!-- My Javascript -->
+    <script src="js/script.js"></script>
+  </body>
+</html>
